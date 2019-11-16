@@ -1,0 +1,90 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-text;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    
+    &:last-child {
+        margin-bottom: 2.5rem;
+    }
+
+    &--main {
+        font-size: 7.4rem;
+        font-weight: $default-font-weight;
+        letter-spacing: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    &--sub {
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+    }
+}
+
+.text-main {
+    display: inline-block;
+    
+    animation: waveY 1.5s ease-out 1.5s;
+    animation-fill-mode: backwards;
+
+    &--t { animation-delay: 125ms; }
+
+    &--u { animation-delay: 250ms; }
+    
+    &--r { animation-delay: 375ms; }
+
+    &--k { animation-delay: 500ms; }
+
+    &--m { animation-delay: 625ms; }
+
+    &--e { animation-delay: 750ms; }
+
+    &--n { animation-delay: 875ms; }
+
+    &--i { animation-delay: 1000ms; }
+
+    &--s { animation-delay: 1125ms; }
+
+    &--t2 { animation-delay: 1250ms; }
+
+    &--a { animation-delay: 1375ms; }
+
+    &--n2 { animation-delay: 1500ms; }
+}
+
+.text-sub {
+    display: inline-block;
+    
+    animation: waveX 1.5s ease-out 1.5s;
+    animation-fill-mode: backwards;
+
+    &--i { animation-delay: 1000ms; }
+
+    &--n { animation-delay: 1005ms; }
+    
+    &--t { animation-delay: 1010ms; }
+
+    &--r { animation-delay: 1015ms; }
+
+    &--o { animation-delay: 1020ms; }
+
+    &--d { animation-delay: 1025ms; }
+
+    &--u { animation-delay: 1030ms; }
+
+    &--c { animation-delay: 1035ms; }
+
+    &--t2 { animation-delay: 1040ms; }
+
+    &--i { animation-delay: 1045ms; }
+
+    &--o { animation-delay: 1050ms; }
+
+    &--n { animation-delay: 1055ms; }
+}
