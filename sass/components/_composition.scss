@@ -1,0 +1,56 @@
+.composition {
+    position: relative;
+    height: 50rem;
+
+    &__photo {
+        width: 50%;
+        height: 38rem;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        position: absolute;
+        z-index: 10;
+        outline-offset: 1rem;
+        transition: all .3s;
+
+        &--1 {
+            left: 5%;
+            top: 3rem;
+            filter: blur(1.5px);
+
+            &:hover {
+                filter: blur(0);
+            }
+        }
+
+        &--2 {
+            left: 25%;
+            top: -3rem;
+        }
+
+        &--3 {
+            right: 5%;
+            top: 6rem;
+            filter: blur(1.5px);
+
+            &:hover {
+                filter: blur(0);
+            }
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2.5rem 5rem rgba($color-black, .5);
+            outline: .2rem solid rgba($color-secondary, .7);
+            z-index: 20;
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+        filter: blur(1.5px);
+    }
+
+    &::after {
+        @include clearfix;
+    }
+}

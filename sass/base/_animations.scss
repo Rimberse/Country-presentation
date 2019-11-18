@@ -61,3 +61,17 @@
     transform: translate(0);
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    box-shadow: none;
+  }
+
+  50% {
+    box-shadow: 0 .25rem 0.5rem rgba($color-black, .1);
+  }
+
+  100% {
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  }
+}
