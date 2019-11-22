@@ -1,0 +1,88 @@
+.national-symbol {
+    max-width: 50rem;
+    height: 36rem;
+    position: relative;
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+    &__caption {
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        height: 5rem;
+        padding: 1rem;
+        position: absolute;
+        transition: height .3s ease-out;
+    }
+
+    &__heading {
+        color: $color-white;
+        font-size: 3rem;
+        font-weight: $bold-font-weight;
+        
+        &-span {
+            padding: 1rem 1.5rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            
+            &--1 {
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light-main, .85), rgba($color-primary-dark-main, .85));
+            }
+
+            &--2 {
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+            }
+
+            &--3 {
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        font-weight: $default-font-weight;
+        margin-top: 1rem;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover &__caption {
+        color: $color-white;
+        height: 100%;
+        transition: height .5s ease-in;
+    }
+
+    &:hover &__caption--1 {
+        background-image: linear-gradient(to right bottom, $color-primary-light-main, $color-primary-dark-main);
+    }
+
+    &:hover &__caption--2 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+    }
+
+    &:hover &__caption--3 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+    }
+
+    &:hover &__description {
+        opacity: 1;
+        transition: opacity .5s ease-in .5s;
+        visibility: visible;
+    }
+
+    &:hover &__heading {
+        color: $color-white;
+    }
+
+    &:hover &__img {
+        object-fit: scale-down;
+        filter: blur(1px);
+        transition: all .6s;
+    }
+}
