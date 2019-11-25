@@ -1,8 +1,10 @@
 .national-symbol {
     max-width: 50rem;
-    height: 36rem;
+    height: 38rem;
     position: relative;
-    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
     &__caption {
         text-align: center;
@@ -46,7 +48,7 @@
 
     &__description {
         font-size: 1.8rem;
-        font-weight: $default-font-weight;
+        font-weight: 300;
         margin-top: 1rem;
         opacity: 0;
         visibility: hidden;

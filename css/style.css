@@ -191,6 +191,16 @@ body {
 .u-row-wider {
   max-width: 150rem !important; }
 
+.u-box-decoration {
+  width: calc(100% - 25rem) !important;
+  margin: 0 auto !important;
+  border-radius: 5px !important;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(255, 255, 255, 0.5) !important; }
+
+.u-no-gutter {
+  margin-bottom: 0 !important; }
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -361,9 +371,11 @@ body {
 
 .national-symbol {
   max-width: 50rem;
-  height: 36rem;
+  height: 38rem;
   position: relative;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
   .national-symbol__caption {
     text-align: center;
     bottom: 0;
@@ -392,7 +404,7 @@ body {
     object-fit: cover; }
   .national-symbol__description {
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 1rem;
     opacity: 0;
     visibility: hidden; }
@@ -416,6 +428,65 @@ body {
     object-fit: scale-down;
     filter: blur(1px);
     transition: all .6s; }
+
+.site {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  padding: 5rem;
+  padding-left: 8rem;
+  padding-right: 8rem; }
+  .site__shape {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .site__shape {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none; } }
+    .site__shape--1 {
+      float: left;
+      transform: translateX(-3rem); }
+    .site__shape--2 {
+      float: right;
+      transform: translateX(3rem); }
+  .site__img {
+    height: 100%;
+    transform: translateX(-5rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .site__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+    .site__caption--1 {
+      font-size: 2.5rem; }
+    .site__caption--2 {
+      font-size: 2.5rem; }
+  .site::after {
+    margin-top: 10rem;
+    content: "";
+    display: inline-block;
+    min-width: 100%;
+    border-bottom: 1px solid #009639; }
+  .site:hover .site__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .site:hover .site__img {
+    transform: translateX(-5rem) scale(1);
+    filter: blur(3px) brightness(80%); }
 
 .row {
   max-width: 114rem;
@@ -507,3 +578,7 @@ body {
 .section-symbols {
   background-color: #f5f5f5;
   padding: 15rem 0; }
+
+.section-tourist-attractions {
+  background-color: #f5f5f5;
+  padding: 25rem 0; }

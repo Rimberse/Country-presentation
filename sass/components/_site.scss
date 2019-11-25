@@ -1,0 +1,80 @@
+.site {
+    width: 90%;
+    margin: 0 auto;
+    font-size: $default-font-size;
+    padding: 5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+
+    &__shape {
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
+
+        &--1 {
+            float: left;
+            transform: translateX(-3rem);
+        }
+
+        &--2 {
+            float: right;
+            transform: translateX(3rem);
+        }
+    }
+
+    &__img {
+        height: 100%;
+        transform: translateX(-5rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 30%);
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+
+        &--1 {
+            font-size: 2.5rem;
+        }
+
+        &--2 {
+            font-size: 2.5rem;
+        }
+    }
+
+    &::after {
+        margin-top: 10rem;
+        content: "";
+        display: inline-block;
+        min-width: 100%;
+        border-bottom: 1px solid $color-primary;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        transform: translateX(-5rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}
