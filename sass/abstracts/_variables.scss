@@ -1,27 +1,17 @@
 // COLORS
-$color-primary: #009639;
+$color-primary: #00843d;     
 $color-primary-light: #b5ff7d;
 $color-primary-dark: #00ad7c;
 $color-primary-light-main: #9bdf46;
 $color-primary-dark-main: #25a55f;
-// $color-primary-light: #86ee60;
-// $color-primary-dark: #2e6e65;
 
-$color-secondary: #ECA154;
+$color-secondary: #ffc72c;     
 $color-secondary-light: #ffc60b;
 $color-secondary-dark: #ff8b00;
-// $color-secondary-light: #ffaa64;
-// $color-secondary-dark: #ff8264;
 
-$color-tertiary: #E03C31;
+$color-tertiary: #d22630;
 $color-tertiary-light: #fd2e2e;
 $color-tertiary-dark: #900d0d;
-
-$color-quaternary: #28ae66;
-
-$color-quinary: #ffff00;
-
-$color-senary: #ca3745;
 
 $color-septenary: #5689ca;
 
@@ -33,19 +23,24 @@ $color-grey-light-2: #e0e0e0;
 $color-black: #000000;
 $color-white: #ffffff;
 
+$color-flame-light: #e28822;
+$color-flame: #e25822;
+$color-flame-dark: #e22822;
 
-// ALTERNATIVE COLOR
-$color-primary-alt: #00843d;
 
-$color-secondary-alt: #d22630;
+// ALTERNATIVE COLORS
+$color-primary-alt: #009639;
 
-$color-tertiary-alt: #ffc72c;
+$color-secondary-alt: #ECA154;
+
+$color-tertiary-alt: #E03C31;
 
 
 // FONT
 $default-font-size: 1.6rem;
 $default-font-weight: 400;
 $bold-font-weight: 700;
+
 
 // GRID
 $grid-width: 114rem;
