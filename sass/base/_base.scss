@@ -1,3 +1,4 @@
+// RESET
 *,
 *::before,
 *::after {
@@ -15,7 +16,55 @@ body {
     padding: 1.5rem;
 }
 
+// SELECTED CONTENT STYLING
 ::selection {
     background-color: $color-primary;
     color: $color-white;
 }
+
+// SCROLLBAR STYLING
+body::-webkit-scrollbar { width: 1.5rem; }                                                          // Background of the bar itself (width of the progress bar)
+
+body::-webkit-scrollbar-track {                                                                     // Empty space below the progress bar (space with a box-shadow)
+    // border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba($color-black, 0.3); 
+}                
+
+body::-webkit-scrollbar-thumb {                                                                     // Draggable scrolling element
+    background-color: $color-primary;   
+    outline: 1px solid $color-black;
+    border-radius: 5px;
+    transition: all .5s;
+
+    &:hover {
+        background-color: $color-secondary;
+    }
+}
+
+ // Directional buttons
+//  ::-webkit-scrollbar-button:single-button {
+//     background-color: $color-white;
+//     display: block;
+//     border-style: solid;
+//     height: 12px;
+//     width: 15px;
+//   }
+
+//   // Up
+//   ::-webkit-scrollbar-button:single-button:vertical:decrement {
+//     border-width: 0 8px 8px 8px;                                                                    // Top button triangle
+//     border-color: transparent transparent $color-primary transparent;                               // Setting bottom border's color sets the color of the top arrow element
+//   }
+
+//   ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+//     border-color: transparent transparent $color-secondary transparent;
+//   }
+//   // Down
+//   ::-webkit-scrollbar-button:single-button:vertical:increment {                                    
+//     border-width: 8px 8px 0px 8px;                                                                  // Bottom button triangle
+//     border-color: $color-primary transparent transparent transparent;                               // Setting top border's color sets the color of the bottom arrow element
+//   }
+
+//   ::-webkit-scrollbar-button:vertical:single-button:increment:hover {                               
+//     border-color: $color-secondary transparent transparent transparent;
+//   }
