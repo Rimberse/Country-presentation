@@ -1,0 +1,51 @@
+.description-box {
+    overflow: hidden;                                               // Forces the text box to occupy the remaining space at right side of the circled number
+    text-align: center;
+    padding: 2rem;
+    border: solid 3px;
+    border-color: transparent;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+    transition: all .5s;
+
+    &:hover {
+        transform: translateX(10px) translateY(-10px) scale(1.1);
+    }
+
+    &--1 {
+        border-top-color: $color-primary;
+
+        &:hover {
+            border-color: $color-primary;
+        }
+    }
+
+    &--2 {
+        border-top-color: $color-secondary;
+
+        &:hover {
+            border-color: $color-secondary;
+        }
+    }
+
+    &--3 {
+        border-top-color: $color-tertiary;
+
+        &:hover {
+            border-color: $color-tertiary;
+        }
+    }
+
+    &--4 {
+        border-top-color: $color-flame;
+
+        &:hover {
+            border-color: $color-flame;
+        }
+    }
+
+    &__list {
+        padding-left: 2rem;
+        text-align: left;
+        font-size: $default-font-size;
+    }
+}

@@ -1,0 +1,51 @@
+.circled-number {
+    float: left;
+    margin-top: 1rem;
+    margin-right: 2.5rem;
+    width: 2.5em;
+    line-height: 2.5em;                                 // em here = font-size's value (2.5em = 2.5 * 5rem) 
+    border-radius: 1.25em;                              // Always half of width or half of line-height
+    font-size: 5rem;
+    font-weight: $bold-font-weight;
+    text-align: center;
+    color: $color-white;
+    transition: all .3s;
+    @include clearfix;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+
+    &--1 {
+        background-color: $color-primary;
+
+        &:hover {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        }
+    }
+
+    &--2 {
+        background-color: $color-secondary;
+
+        &:hover {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        }
+    }
+
+    &--3 {
+        background-color: $color-tertiary;
+
+        &:hover {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        }
+    }
+
+    &--4 {
+        background-color: $color-flame;
+
+        &:hover {
+            background-image: linear-gradient(to right bottom, $color-flame-light, $color-flame-dark);
+        }
+    }
+}

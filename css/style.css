@@ -308,6 +308,42 @@ body {
 .btn-text__icon {
   margin-left: .5rem; }
 
+.circled-number {
+  float: left;
+  margin-top: 1rem;
+  margin-right: 2.5rem;
+  width: 2.5em;
+  line-height: 2.5em;
+  border-radius: 1.25em;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  transition: all .3s; }
+  .circled-number:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .circled-number:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .circled-number--1 {
+    background-color: #00843d; }
+    .circled-number--1:hover {
+      background-image: linear-gradient(to right bottom, #b5ff7d, #00ad7c); }
+  .circled-number--2 {
+    background-color: #ffc72c; }
+    .circled-number--2:hover {
+      background-image: linear-gradient(to right bottom, #ffc60b, #ff8b00); }
+  .circled-number--3 {
+    background-color: #d22630; }
+    .circled-number--3:hover {
+      background-image: linear-gradient(to right bottom, #fd2e2e, #900d0d); }
+  .circled-number--4 {
+    background-color: #e25822; }
+    .circled-number--4:hover {
+      background-image: linear-gradient(to right bottom, #e28822, #e22822); }
+
 .composition {
   position: relative;
   height: 50rem; }
@@ -347,6 +383,37 @@ body {
     content: "";
     display: table;
     clear: both; }
+
+.description-box {
+  overflow: hidden;
+  text-align: center;
+  padding: 2rem;
+  border: solid 3px;
+  border-color: transparent;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  transition: all .5s; }
+  .description-box:hover {
+    transform: translateX(10px) translateY(-10px) scale(1.1); }
+  .description-box--1 {
+    border-top-color: #00843d; }
+    .description-box--1:hover {
+      border-color: #00843d; }
+  .description-box--2 {
+    border-top-color: #ffc72c; }
+    .description-box--2:hover {
+      border-color: #ffc72c; }
+  .description-box--3 {
+    border-top-color: #d22630; }
+    .description-box--3:hover {
+      border-color: #d22630; }
+  .description-box--4 {
+    border-top-color: #e25822; }
+    .description-box--4:hover {
+      border-color: #e25822; }
+  .description-box__list {
+    padding-left: 2rem;
+    text-align: left;
+    font-size: 1.6rem; }
 
 .national-dish {
   max-width: 72rem;
@@ -501,6 +568,29 @@ body {
       background-color: #ffc72c; }
     .photo__caption--3 {
       background-color: #d22630; }
+
+.progress-bar {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 1.5rem;
+  line-height: 2.5rem;
+  background-image: linear-gradient(to right, #e28822, #e22822);
+  color: #ffffff;
+  text-align: center;
+  box-shadow: inset 0 -1px 1px #ffffff; }
+  .progress-bar--1 {
+    width: 100%; }
+  .progress-bar--2 {
+    width: 70.54%; }
+  .progress-bar--3 {
+    width: 50.35%; }
+  .progress-bar--4 {
+    width: 32.39%; }
+  .progress-bar--5 {
+    width: 19.24%; }
+  .progress-bar--6 {
+    width: 15.70%; }
 
 .site {
   width: 90%;
@@ -657,4 +747,7 @@ body {
   padding: 20rem 0; }
 
 .section-Darvaza {
+  padding: 20rem 0; }
+
+.section-facts {
   padding: 20rem 0; }
