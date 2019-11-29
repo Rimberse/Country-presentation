@@ -75,3 +75,13 @@
     box-shadow: 0 .5rem 1rem rgba($color-black, .2);
   }
 }
+
+@keyframes fade {
+  from {
+    opacity: .5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
