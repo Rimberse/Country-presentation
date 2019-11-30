@@ -2,11 +2,12 @@
     
 
     &__box {
-        // max-width: 100rem;
         position: relative;
         margin: auto;
-
-        // outline: 5px $color-black;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+        border: 1px solid $color-black;
+        outline: 1rem double $color-secondary;
+        outline-offset: 5rem;
     }
 
     &__slide {
@@ -25,6 +26,7 @@
 
     &__img {
         width: 100%;
+        vertical-align: middle;     // By default images are rendered like inline elements, so applied line-height adds additional white space below, vertical-align resolves this issue
     }
 
     &__text {

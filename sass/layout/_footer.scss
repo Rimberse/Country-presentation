@@ -1,0 +1,36 @@
+.footer {
+    background-color: $color-grey-dark;
+    padding: 10rem 0;
+
+    &__logo {
+        position: relative;
+        height: 35rem;
+    }
+
+    &__wrap {
+        @include absCenter;
+        text-align: center;
+        width: 27rem;
+        height: 27rem;
+        padding: 1rem;   // calc(270px * 0.025)
+        @include clearfix;
+        
+        &--rotated {
+            z-index: 1;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background-color: $color-grey-dark;
+        }
+    }
+
+    &__square {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        background-image: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
+
+        &--rotated {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        }
+    }
+}
