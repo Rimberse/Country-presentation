@@ -15,11 +15,8 @@
 .u-row-wider { max-width: 150rem !important; }
 
 .u-box-decoration {
-    width: calc(100% - 25rem) !important;;
-    margin: 0 auto !important;;
-    border-radius: 5px !important;; 
-    box-shadow: 0 3rem 6rem rgba($color-black, .1) !important;; 
-    background-color: rgba($color-white, .5) !important;;
+    border-radius: 5px !important;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2) !important;
 }
 
 .u-no-gutter { margin-bottom: 0 !important; }

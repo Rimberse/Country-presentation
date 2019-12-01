@@ -2,7 +2,6 @@
     height: 97vh;
     position: relative;
     
-
     &__bar {
         position: relative;
         width: 100%;
@@ -13,11 +12,13 @@
     }
 
     &__star {
-        @include absCenter;
-        top: 35%;
-        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
-        width: 61rem;
-        height: 61rem;
+        position: relative; 
+        margin: 0 auto;
+        transform: translateY(-20px);
+        background-image: linear-gradient(to bottom, $color-secondary-light, $color-secondary-dark);
+        width: 57rem;
+        height: 57rem;
+        border: none;
         -webkit-clip-path: polygon(50% 0, 66.66% 16.66%, 83.33% 16.66%, 83.33% 33.33%, 100% 50%,
                                    83.33% 66.66%, 83.33% 83.33%, 66.66% 83.33%, 50% 100%,
                                    33.33% 83.33%, 16.66% 83.33%, 16.66% 66.66%, 0 50%,
@@ -28,8 +29,11 @@
                            16.66% 33.33%, 16.66% 16.66%, 33.33% 16.66%);
         transition: clip-path 1s ease;
 
+        animation: fadeInImage 1s ease-out 1s;
+        animation-fill-mode: backwards;
+
         &:hover {
-            top: 38%;
+            transform: translateY(5px);
             -webkit-clip-path: polygon(50% 0, 83.33% 0, 100% 0, 100% 16.66%, 100% 50%,
                                        100% 83.33%, 100% 100%, 83.33% 100%, 50% 100%,
                                        16.66% 100%, 0 100%, 0 83.33%, 0 50%,
@@ -39,16 +43,17 @@
                                16.66% 100%, 0 100%, 0 83.33%, 0 50%,
                                0 16.66%, 0 0, 16.66% 0);
             background: none;
+            border: 1px solid $color-secondary;
         }
     }
 
     &__logo {
         position: absolute;
-        width: 60rem;
-        height: 60rem;
+        width: 55rem;
+        height: 55rem;
 
-        top: 5px;
-        left: 5px;
+        top: 10px;
+        left: 10px;
         -webkit-clip-path: polygon(50% 0, 66.66% 16.66%, 83.33% 16.66%, 83.33% 33.33%, 100% 50%,
                                    83.33% 66.66%, 83.33% 83.33%, 66.66% 83.33%, 50% 100%,
                                    33.33% 83.33%, 16.66% 83.33%, 16.66% 66.66%, 0 50%,
@@ -68,12 +73,13 @@
                                100% 83.33%, 100% 100%, 83.33% 100%, 50% 100%,
                                16.66% 100%, 0 100%, 0 83.33%, 0 50%,
                                0 16.66%, 0 0, 16.66% 0);
+            
         }
     }
 
     &__text-box {
-        @include absCenter;
-        top: 85%;
+        width: 50%;
+        margin: 0 auto;
         text-align: center;
     }
 
