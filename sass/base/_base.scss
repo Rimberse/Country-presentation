@@ -9,11 +9,27 @@
 
 html {
     font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    // @include respond(big-desktop) {
+    //     font-size: 75%;
+    // }
 }
 
 body {
     box-sizing: border-box;
     padding: 1.5rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
 
 // SELECTED CONTENT STYLING
@@ -41,7 +57,7 @@ body::-webkit-scrollbar-thumb {                                                 
     }
 }
 
- // Directional buttons
+// Directional buttons
 //  ::-webkit-scrollbar-button:single-button {
 //     background-color: $color-white;
 //     display: block;

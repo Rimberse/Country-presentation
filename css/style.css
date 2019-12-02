@@ -65,10 +65,19 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
   padding: 1.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 ::selection {
   background-color: #00843d;
@@ -106,10 +115,34 @@ body {
     font-weight: 400;
     letter-spacing: 2rem;
     margin-left: 1rem; }
+    @media only screen and (max-width: 75em) {
+      .heading-primary--main {
+        font-size: 7rem;
+        letter-spacing: 1.5rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 3rem;
+        letter-spacing: .5rem; } }
   .heading-primary--sub {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 1rem; }
+    @media only screen and (max-width: 75em) {
+      .heading-primary--sub {
+        font-size: 3.5rem;
+        letter-spacing: 1rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--sub {
+        font-size: 2.5rem;
+        letter-spacing: .5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1.5rem;
+        letter-spacing: .25rem; } }
 
 .heading-secondary {
   font-size: 4.5rem;
@@ -284,6 +317,15 @@ body {
   transition: all .2s;
   border: none;
   cursor: pointer; }
+  @media only screen and (max-width: 75em) {
+    .btn, .btn:link, .btn:visited {
+      padding: 1rem 2.5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .btn, .btn:link, .btn:visited {
+      padding: 1rem 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .btn, .btn:link, .btn:visited {
+      padding: 1rem 1.5rem; } }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -818,8 +860,16 @@ body {
     width: 100%;
     height: 5rem;
     background-color: #00843d;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%, 50% 25%, 48% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%, 50% 25%, 48% 100%, 0 100%); }
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 53% 100%, 50% 25%, 47% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 53% 100%, 50% 25%, 47% 100%, 0 100%); }
+    @media only screen and (max-width: 75em) {
+      .header__bar {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%, 50% 25%, 45% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%, 50% 25%, 45% 100%, 0 100%); } }
+    @media only screen and (max-width: 37.5em) {
+      .header__bar {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 58% 100%, 50% 25%, 42% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 58% 100%, 50% 25%, 42% 100%, 0 100%); } }
   .header__star {
     position: relative;
     margin: 0 auto;
@@ -839,28 +889,70 @@ body {
       clip-path: polygon(50% 0, 83.33% 0, 100% 0, 100% 16.66%, 100% 50%, 100% 83.33%, 100% 100%, 83.33% 100%, 50% 100%, 16.66% 100%, 0 100%, 0 83.33%, 0 50%, 0 16.66%, 0 0, 16.66% 0);
       background: none;
       border: 1px solid #ffc72c; }
+    @media only screen and (max-width: 75em) {
+      .header__star {
+        width: 47rem;
+        height: 47rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__star {
+        width: 37rem;
+        height: 37rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__star {
+        width: 27rem;
+        height: 27rem; } }
   .header__logo {
     position: absolute;
     width: 55rem;
     height: 55rem;
-    top: 10px;
-    left: 10px;
+    top: 1rem;
+    left: 1rem;
     -webkit-clip-path: polygon(50% 0, 66.66% 16.66%, 83.33% 16.66%, 83.33% 33.33%, 100% 50%, 83.33% 66.66%, 83.33% 83.33%, 66.66% 83.33%, 50% 100%, 33.33% 83.33%, 16.66% 83.33%, 16.66% 66.66%, 0 50%, 16.66% 33.33%, 16.66% 16.66%, 33.33% 16.66%);
     clip-path: polygon(50% 0, 66.66% 16.66%, 83.33% 16.66%, 83.33% 33.33%, 100% 50%, 83.33% 66.66%, 83.33% 83.33%, 66.66% 83.33%, 50% 100%, 33.33% 83.33%, 16.66% 83.33%, 16.66% 66.66%, 0 50%, 16.66% 33.33%, 16.66% 16.66%, 33.33% 16.66%);
     transition: clip-path 1s ease; }
     .header__logo:hover {
       -webkit-clip-path: polygon(50% 0, 83.33% 0, 100% 0, 100% 16.66%, 100% 50%, 100% 83.33%, 100% 100%, 83.33% 100%, 50% 100%, 16.66% 100%, 0 100%, 0 83.33%, 0 50%, 0 16.66%, 0 0, 16.66% 0);
       clip-path: polygon(50% 0, 83.33% 0, 100% 0, 100% 16.66%, 100% 50%, 100% 83.33%, 100% 100%, 83.33% 100%, 50% 100%, 16.66% 100%, 0 100%, 0 83.33%, 0 50%, 0 16.66%, 0 0, 16.66% 0); }
+    @media only screen and (max-width: 75em) {
+      .header__logo {
+        width: 45rem;
+        height: 45rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__logo {
+        width: 35rem;
+        height: 35rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__logo {
+        width: 25rem;
+        height: 25rem; } }
   .header__text-box {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     text-align: center; }
+    @media only screen and (max-width: 75em) {
+      .header__text-box {
+        margin-top: 10rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__text-box {
+        margin-top: 20rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__text-box {
+        margin-top: 30rem; } }
   .header__icon {
     font-size: 5rem;
     background-image: linear-gradient(to right, #b5ff7d, #00ad7c);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
+    @media only screen and (max-width: 75em) {
+      .header__icon {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__icon {
+        font-size: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__icon {
+        font-size: 2rem; } }
 
 .section-about {
   position: relative;

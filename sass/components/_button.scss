@@ -9,6 +9,18 @@
 
         border: none;
         cursor: pointer;
+
+        @include respond(tab-land) {
+            padding: 1rem 2.5rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 1rem 2rem;
+        }
+
+        @include respond(phone) {
+            padding: 1rem 1.5rem;
+        }
     }
 
     &:hover {
