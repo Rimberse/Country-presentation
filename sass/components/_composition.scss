@@ -2,9 +2,17 @@
     position: relative;
     height: 50rem;
 
+    @include respond(tab-port) {
+        height: 45rem;
+    }
+
+    @include respond(phone) {
+        height: 30rem;
+    }
+
     &__photo {
         width: 50%;
-        height: 38rem;
+        height: auto;
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
         position: absolute;
@@ -48,9 +56,5 @@
     &:hover &__photo:not(:hover) {
         transform: scale(.95);
         filter: blur(1.5px);
-    }
-
-    &::after {
-        @include clearfix;
     }
 }

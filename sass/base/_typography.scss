@@ -75,12 +75,24 @@ body {
         transform: scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }
+
+    @include respond(tab-port) {
+        font-size: 4rem;
+    }
+
+    @include respond(phone) {
+        font-size: 3.5rem;
+    }
 }
 
 .heading-tertiary {
     font-size: 2rem;
     font-weight: $bold-font-weight;
     text-transform: uppercase;
+
+    @include respond(phone) {
+        font-size: $default-font-size;
+    }
 }
 
 .paragraph {
