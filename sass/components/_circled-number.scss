@@ -12,6 +12,22 @@
     transition: all .3s;
     @include clearfix;
 
+    @include respond(tab-port) {
+        margin-left: 2.5rem;
+        margin-right: 5rem;
+        width: 2em;
+        line-height: 2em;
+        border-radius: 1em;
+    }
+
+    @include respond(phone) {
+        margin-left: 1rem;
+        margin-right: 2.5rem;
+        width: 1.5em;
+        line-height: 1.5em;
+        border-radius: 0.75em;
+    }
+
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);

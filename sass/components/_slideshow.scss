@@ -3,11 +3,21 @@
 
     &__box {
         position: relative;
-        margin: auto;
+        margin: 6rem;
         box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
         border: 1px solid $color-black;
         outline: 1rem double $color-secondary;
         outline-offset: 5rem;
+
+        @include respond(tab-port) {
+            outline-offset: 2.5rem;
+            margin: 3.5rem;
+        }
+
+        @include respond(phone) {
+            outline-offset: 1rem;
+            margin: 2rem
+        }
     }
 
     &__slide {
@@ -68,11 +78,12 @@
     }
 
     &__dot {
+        // counter-reset: section;
         cursor: pointer;
         display: inline-block;
         height: 1.5rem;
         width: 1.5rem;
-        margin: 0 3px;
+        margin: 5px 3px;
         border-radius: 50%;
         background-color: $color-primary-light;
         transition: background-color 0.5s ease;
@@ -80,6 +91,20 @@
         &:hover,
         &--active {
             background-color: $color-primary-dark;
+        }
+
+        @include respond(tab-port) {
+            // &::before {                              <!-- TODO -->
+            //     font-size: $default-font-size;
+            //     display: inline-block;
+            //     counter-increment: section;
+            //     content: "1" counter(section) "";
+            //     // margin-right: 1.5rem;
+            // }
+
+            border-radius: 0;
+            width: 2.5rem;
+            height: 2.5rem;
         }
     }
 }

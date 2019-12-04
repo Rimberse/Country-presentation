@@ -7,6 +7,11 @@
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
+    @include respond(phone) {
+        max-width: 35rem;
+        height: 30rem;
+    }
+
     &__caption {
         text-align: center;
         bottom: 0;
@@ -16,6 +21,11 @@
         padding-bottom: 5rem;
         position: absolute;
         transition: height .3s ease-out;
+
+        @include respond(phone) {
+            height: 3.5rem;
+            padding: .5rem;
+        }
     }
 
     &__heading {
@@ -39,6 +49,14 @@
             &--3 {
                 background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
             }
+
+            @include respond(phone) {
+                padding: .5rem 1rem;
+            }
+        }
+
+        @include respond(phone) {
+            font-size: 1.8rem;
         }
     }
 
@@ -54,6 +72,11 @@
         margin-top: 2rem;
         opacity: 0;
         visibility: hidden;
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
     }
 
     &:hover &__caption {

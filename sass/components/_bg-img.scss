@@ -6,6 +6,10 @@
     background-position: center;
     margin-bottom: 10rem;
 
+    @include respond(tab-port) {
+        height: 100vh;
+    }
+
     &__heading {
         font-size: 8rem;
         font-weight: $bold-font-weight;
@@ -19,6 +23,11 @@
         width: 75%;
         background-clip: text;
         -webkit-background-clip: text;
+
+        @include respond(phone) {
+            font-size: 6rem;
+            letter-spacing: 1.5rem;
+        }
 
         &:hover {             
             color: transparent;       
