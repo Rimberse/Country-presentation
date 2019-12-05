@@ -51,3 +51,15 @@
         width: 100% !important;
     }
 }
+
+.u-count-reset { counter-reset: section; }
+
+// Read more/less styling
+#more { display: none; }
+
+#dots {
+    margin-left: .5rem;
+    font-size: 2rem;
+    font-weight: $bold-font-weight;
+    letter-spacing: .5rem;
+}

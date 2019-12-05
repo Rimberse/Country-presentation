@@ -1,3 +1,4 @@
+// SLIDESHOW
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -27,4 +28,22 @@ function showSlides(n) {
 
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " slideshow__dot--active";
+}
+
+// MORE & LESS BUTTON
+function ReadMoreLessFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("more-less-btn");
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Lire plus \<i class=\"btn-text__icon fas fa-angle-double-down\"\>\<\/i\>";                     // escaping special characters
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Lire moins \<i class=\"btn-text__icon fas fa-angle-double-up\"\>\<\/i\>";
+        moreText.style.display = "inline";
+        btnText.style.marginTop = "3rem";
+    }
 }

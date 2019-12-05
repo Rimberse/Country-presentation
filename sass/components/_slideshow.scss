@@ -32,6 +32,11 @@
         position: absolute;
         top: 0;
         padding: 1rem 1.5rem;
+
+        @include respond(phone) {
+            font-size: 1rem;
+            padding: .5rem 1rem;
+        }
     }
 
     &__img {
@@ -47,6 +52,11 @@
         bottom: 1rem;
         padding: 1rem 1.5rem;
         text-align: center;
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+            padding: .5rem 1rem;
+        }
     }
 
     &__button {
@@ -78,12 +88,11 @@
     }
 
     &__dot {
-        // counter-reset: section;
         cursor: pointer;
         display: inline-block;
         height: 1.5rem;
         width: 1.5rem;
-        margin: 5px 3px;
+        margin: 5px;
         border-radius: 50%;
         background-color: $color-primary-light;
         transition: background-color 0.5s ease;
@@ -94,17 +103,19 @@
         }
 
         @include respond(tab-port) {
-            // &::before {                              <!-- TODO -->
-            //     font-size: $default-font-size;
-            //     display: inline-block;
-            //     counter-increment: section;
-            //     content: "1" counter(section) "";
-            //     // margin-right: 1.5rem;
-            // }
+            &::before {                              
+                font-size: $default-font-size;
+                display: inline-block;
+                counter-increment: section;
+                content: "" counter(section) "";
+                text-align: center;
+                vertical-align: middle;
+                color: $color-grey-light-1;
+            }
 
-            border-radius: 0;
-            width: 2.5rem;
-            height: 2.5rem;
+            border-radius: 1px;
+            width: 2.75rem;
+            height: 2.75rem;
         }
     }
 }

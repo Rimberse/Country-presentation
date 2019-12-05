@@ -2,34 +2,62 @@
     position: relative;
     background-color: $color-grey-light-1;
     padding: 20rem 0;
+
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }
 }
 
 .section-food {
     padding: 15rem 0;
     position: relative;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-symbols {
     background-color: $color-grey-light-1;
     padding: 20rem 0;
+
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }
 }
 
 .section-tourist-attractions {
     background-color: $color-grey-light-1;
     padding: 15rem 0;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-Darvaza {
     background-color: $color-grey-light-1;
     padding: 20rem 0;
+
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }
 }
 
 .section-facts {
     background-color: $color-grey-light-1;
     padding: 15rem 0;
+    
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-gallery {
     background-color: $color-grey-light-1;
     padding: 20rem 0;
+
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }
 }

@@ -13,8 +13,6 @@
     transform: translate(-50%, -50%);
 }
 
-// ORDER: Base + typography > general layout + grid > page layout > components
-
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };            // 600px
@@ -29,6 +27,6 @@
     }
 
     @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em) { @content };           // 1800px
+        @media only screen and (min-width: 125em) { @content };           // 2000px
     }
 }
